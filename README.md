@@ -8,6 +8,12 @@ algebra. There is **no database, no external AI service, and no disk I/O at requ
 response is derived entirely from the request payload and a set of deterministically materialised
 weights.
 
+> **ℹ️ Note:** This is an architectural demonstration of a stateless 7-fold ensemble inference
+> pipeline using a *deterministic mock ensemble* — **not a trained GBDT artifact**. The fold
+> weights are generated reproducibly from the `model_version` string rather than learned from
+> data. The value here is the API design, the strict validation layer, and the rigorous
+> mean/variance ensemble mathematics, all of which carry over unchanged to a real trained model.
+
 ---
 
 ## ✨ Design Philosophy
